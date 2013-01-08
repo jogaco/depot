@@ -44,7 +44,7 @@ Product.create(:title => 'Programming Ruby 1.9',
         out there. If you need to get working programs delivered fast,
         you should add Ruby to your toolbox.
       </p>},
-               :image_url => 'http://ecx.images-amazon.com/images/I/51Pkt8UcdAL._AA160_.jpg',
+               :image_url => '/images/ruby.jpg',
                :price => 49.50)
 # . . .
 
