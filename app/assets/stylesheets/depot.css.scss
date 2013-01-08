@@ -145,3 +145,7 @@
   color: #bfb;
   font-size: small;
 }
+/* for Add To Cart button in the same line as the price */
+#store .entry form, #store .entry form div {
+  display: inline;
+}
