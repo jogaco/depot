@@ -44,6 +44,7 @@ class ProductsControllerTest < ActionController::TestCase
   test "should get edit" do
     get :edit, id: @product
     assert_response :success
+    assert_select ".field", :minimum => 4
   end
 
   test "should update product" do
