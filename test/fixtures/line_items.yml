@@ -7,5 +7,5 @@ one:
 
 two:
   product: ruby
-  cart_id: one
+  cart: one
   price: 9.99

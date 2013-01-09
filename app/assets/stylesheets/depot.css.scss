@@ -160,3 +160,11 @@
   font-weight: bold;
   border-top: 1px solid #595;
 }
+
+#store #continue_shopping, #store .button_to, #store .button_to div {
+  display: inline;
+}
+
+#cart_contents {
+  margin-bottom: 18px;
+}
