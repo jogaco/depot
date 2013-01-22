@@ -21,8 +21,8 @@ test:
   timeout: 5000
 
 production:
-  adapter: sqlite3
+  adapter: postgres
   encoding: utf8
-  database: db/production.sqlite3
+  database: depot
   pool: 5
   timeout: 5000
