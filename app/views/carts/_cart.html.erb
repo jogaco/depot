@@ -1,5 +1,6 @@
 <div class="cart_title" >Your Cart</div>
 <table id="cart_contents">
+  <% show_remove_line ||= false %>
   <%= render :partial => "line_items/line_item", :collection => @cart.line_items, :locals => {:show_remove_line => show_remove_line} %>
 
   <tr class="total_line" >

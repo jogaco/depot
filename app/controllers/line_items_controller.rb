@@ -46,7 +46,8 @@ class LineItemsController < ApplicationController
 
     respond_to do |format|
       if @line_item.save
-        format.html { redirect_to @line_item.cart, notice: 'Line item was successfully created.' }
+        format.html { redirect_to store_path }
+        format.js
         format.json { render json: @line_item, status: :created, location: @line_item }
       else
         format.html { render action: "new" }
@@ -62,7 +63,7 @@ class LineItemsController < ApplicationController
 
     respond_to do |format|
       if @line_item.update_attributes(params[:line_item])
-        format.html { redirect_to store_path, notice: "'#{@line_item.product.title}' has beed added to your cart" }
+        format.html { redirect_to @line_item, notice: 'Line item was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
