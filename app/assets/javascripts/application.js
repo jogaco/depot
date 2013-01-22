@@ -14,4 +14,5 @@
 //= require jquery_ujs
 //= require jquery.ui.core
 //= require jquery.ui.effect-highlight
+//= require jquery.ui.effect-blind
 //= require_tree .
