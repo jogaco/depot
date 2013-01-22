@@ -6,6 +6,7 @@ class LineItem < ActiveRecord::Base
 
   def total_price
     begin
+      # get price from the line: safer because product price could change after the order
       price * quantity
     rescue ActiveRecord::FieldError
       product.price * quantity
