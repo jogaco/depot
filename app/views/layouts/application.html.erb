@@ -15,6 +15,10 @@
 </div>
 <div id="columns">
   <div id="side">
+    <div id="cart" >
+      <%= render :partial => "carts/cart", :object => @cart, :locals => {:show_remove_line => false} %>
+    </div>
+
     <%= link_to 'Home', store_url %><br />
     <a href="/">Questions</a><br />
     <a href="/">News</a><br />
