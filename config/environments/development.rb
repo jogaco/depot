@@ -1,6 +1,8 @@
 Depot::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
 
+  config.assets.initialize_on_precompile = true
+
   # In the development environment your application's code is reloaded on
   # every request. This slows down response time but is perfect for development
   # since you don't have to restart the web server when you make code changes.
@@ -29,9 +31,11 @@ Depot::Application.configure do
   # with SQLite, MySQL, and PostgreSQL)
   config.active_record.auto_explain_threshold_in_seconds = 0.5
 
-  # Do not compress assets
-  config.assets.compress = false
+  # Test assets compression
+  config.assets.compress = true
+  # Generate digests for assets URLs
+  config.assets.digest = true
 
   # Expands the lines which load the assets
-  config.assets.debug = true
+  config.assets.debug = false
 end
