@@ -1,9 +1,11 @@
 Depot::Application.routes.draw do
-  resources :line_items
-
+  resources :line_items do
+    member do
+      post 'decrement'
+    end
+  end
 
   resources :carts
-
 
   get "store/index"
 

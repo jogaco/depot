@@ -83,4 +83,13 @@ class LineItemsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def decrement
+    @cart = current_cart
+    @cart.decrement_quantity(params[:id])
+    respond_to do |format|
+      format.html { redirect_to store_path}
+      format.json { head :no_content }
+    end
+  end
 end
