@@ -1,3 +1,5 @@
+$("#notice").hide();
+
 $("div#cart").html("<%= escape_javascript render(@cart) %>");
 if ($('#cart_contents tr.item').length == 1) { $("div#cart").show("blind", { mode: "show", direction: "vertical" }, 1000) }
 if ($('#cart_contents tr.item').length == 0) { $("div#cart").hide("blind", { mode: "hide", direction: "vertical" }, 1000) }
