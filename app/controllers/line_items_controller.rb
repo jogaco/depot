@@ -86,9 +86,13 @@ class LineItemsController < ApplicationController
 
   def decrement
     @cart = current_cart
-    @cart.decrement_quantity(params[:id])
+    line_item = @cart.decrement_quantity(params[:id])
     respond_to do |format|
       format.html { redirect_to store_path}
+      format.js   do
+        @current_item = line_item
+        render :template => 'line_items/create'
+      end
       format.json { head :no_content }
     end
   end

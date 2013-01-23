@@ -22,6 +22,7 @@ class Cart < ActiveRecord::Base
         line.destroy
       end
     end
+    line
   end
 
   def total_price
