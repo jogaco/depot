@@ -15,8 +15,10 @@
 </div>
 <div id="columns">
   <div id="side">
-    <%= hidden_div_if(@cart.line_items.empty?, :id => "cart") do %>
-        <%= render :partial => "carts/cart", :object => @cart, :locals => {:show_remove_line => false} %>
+    <% if @cart %>
+        <%= hidden_div_if(@cart.line_items.empty?, :id => "cart") do %>
+            <%= render :partial => "carts/cart", :object => @cart, :locals => {:show_remove_line => false} %>
+        <% end %>
     <% end %>
 
     <%= link_to 'Home', store_url %><br />
