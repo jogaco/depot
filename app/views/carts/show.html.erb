@@ -2,6 +2,6 @@
     <p id="notice"><%= notice %></p>
 <% end %>
 
-<%= render :partial => "carts/cart", :object => @cart, :locals => {:show_remove_line => true} %>
+<%= render @cart %>
 
 <%= link_to 'Continue shopping', store_path, :id => :continue_shopping %>

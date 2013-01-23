@@ -17,7 +17,7 @@
   <div id="side">
     <% if @cart %>
         <%= hidden_div_if(@cart.line_items.empty?, :id => "cart") do %>
-            <%= render :partial => "carts/cart", :object => @cart, :locals => {:show_remove_line => false} %>
+            <%= render @cart %>
         <% end %>
     <% end %>
 
