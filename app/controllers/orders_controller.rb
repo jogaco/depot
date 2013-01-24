@@ -29,6 +29,7 @@ class OrdersController < ApplicationController
       redirect_to store_path, notice: "Your cart is empty"
       return
     end
+    @hide_checkout = true
     @order = Order.new
 
     respond_to do |format|
