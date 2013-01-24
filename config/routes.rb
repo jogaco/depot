@@ -1,7 +1,6 @@
 Depot::Application.routes.draw do
   resources :orders
 
-
   resources :line_items do
     member do
       post 'decrement'
@@ -12,8 +11,11 @@ Depot::Application.routes.draw do
 
   get "store/index"
 
-  resources :products
-
+  resources :products do
+    member do
+      get :who_bought
+    end
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
