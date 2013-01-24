@@ -20,6 +20,23 @@
   <%= @order.pay_type %>
 </p>
 
+<table class="order_lines">
+  <caption>Order lines</caption>
+  <tr>
+    <th>Book title</th>
+    <th>Unit price</th>
+    <th>Quantity</th>
+    <th>Total</th>
+  </tr>
+<% @order.line_items.each do |line| %>
+  <tr>
+    <td><%= line.product.title %></td>
+    <td><%= number_to_currency line.price %></td>
+    <td><%= line.quantity %></td>
+    <td><%= number_to_currency line.total_price %></td>
+  </tr>
+<% end %>
+</table>
 
 <%= link_to 'Edit', edit_order_path(@order) %> |
 <%= link_to 'Back', orders_path %>
