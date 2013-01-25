@@ -4,10 +4,10 @@ one:
   name: John Foxx
   address: MyText
   email: john@example.com
-  pay_type: Check
+  payment_type: two
 
 two:
   name: MyString
   address: MyText
   email: MyString
-  pay_type: MyString
+  payment_type: two
