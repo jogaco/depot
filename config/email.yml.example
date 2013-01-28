@@ -1,0 +1,19 @@
+# email settings
+# Should be renamed to email.yml
+#
+development:
+    address: localhost
+    port: 25
+    domain: localhost.localdomain
+#    authentication: plain
+#    user_name: email_account_login
+#    password: email_account_password
+
+production:
+    address: mail.domain.com
+    port: 465
+    domain: domain.com
+    authentication: login
+    user_name: email_account_login
+    password: email_account_password
+    tls: true
