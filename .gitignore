@@ -16,4 +16,4 @@
 /.idea
 
 # Ignore config files with passwords
-/config/email.yaml
+/config/email.yml

@@ -40,4 +40,11 @@ Depot::Application.configure do
   config.assets.debug = false
 
   config.action_mailer.delivery_method = :smtp
+  smtp_options = YAML.load_file("#{Rails.root}/config/email.yml")
+
+  config.action_mailer.smtp_settings = {
+      address: smtp_options["address"],
+      port: smtp_options["port"]
+  }
+
 end

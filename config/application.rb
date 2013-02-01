@@ -61,15 +61,5 @@ module Depot
 
     smtp_options = YAML.load_file("#{Rails.root}/config/email.yml")
     default_from = smtp_options["default_from"]
-
-    config.action_mailer.smtp_settings = {
-        address: smtp_options["address"],
-        port: smtp_options["port"],
-        domain: smtp_options["domain"],
-        authentication: smtp_options["authentication"],
-        user_name: smtp_options["user_name"],
-        password: smtp_options["password"],
-        enable_starttls_auto: smtp_options["tls"]
-    }
   end
 end
