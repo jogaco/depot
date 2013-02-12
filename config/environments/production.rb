@@ -54,16 +54,15 @@ Depot::Application.configure do
   # Disable delivery errors, bad email addresses will be ignored
   # config.action_mailer.raise_delivery_errors = false
   config.action_mailer.delivery_method = :smtp
-  smtp_options = YAML.load_file("#{Rails.root}/config/email.yml")
 
   config.action_mailer.smtp_settings = {
-      address: smtp_options["address"],
-      port: smtp_options["port"],
-      domain: smtp_options["domain"],
-      authentication: smtp_options["authentication"],
-      user_name: smtp_options["user_name"],
-      password: smtp_options["password"],
-      enable_starttls_auto: smtp_options["tls"]
+      address: ENV['smtp_address'],
+      port: ENV['smtp_port'],
+      domain: ENV['smtp_domain'],
+      authentication: ENV['smtp_authentication'],
+      user_name: ENV['smtp_user_name'],
+      password: ENV['smtp_password'],
+      enable_starttls_auto: ENV['smtp_tls']
   }
 
   # Enable threaded mode
