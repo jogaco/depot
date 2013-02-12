@@ -58,8 +58,5 @@ module Depot
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
-
-    smtp_options = YAML.load_file("#{Rails.root}/config/email.yml")
-    default_from = smtp_options["default_from"]
   end
 end
