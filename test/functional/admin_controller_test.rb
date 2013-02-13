@@ -6,4 +6,10 @@ class AdminControllerTest < ActionController::TestCase
     assert_response :success
   end
 
+  test 'should be logged in for admin tasks' do
+    logout()
+    get :index
+    assert_redirected_to login_path
+  end
+
 end
