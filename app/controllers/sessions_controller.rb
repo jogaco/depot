@@ -5,6 +5,11 @@ class SessionsController < ApplicationController
   end
 
   def create
+    if User.count.zero?
+    # no user exists: create default admin with supplied credentials
+      User.create(name: params[:name], password: params[:password])
+    end
+
     user = User.find_by_name(params[:name])
     if user and user.authenticate(params[:password])
       session[:user_id] = user.id
