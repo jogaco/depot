@@ -11,7 +11,7 @@
 <body id="store">
 <div id="banner">
   <%= image_tag("logo.png") %>
-  <%= @page_title || "Pragmatic Bookshelf" %><!-- <label id="code.depot.e.title"/> -->
+  <%= @page_title || t('.title') %><!-- <label id="code.depot.e.title"/> -->
 </div>
 <div id="columns">
   <div id="side">
@@ -21,10 +21,10 @@
         <% end %>
     <% end %>
 
-    <%= link_to 'Home', store_url %><br />
-    <a href="/">Questions</a><br />
-    <a href="/">News</a><br />
-    <a href="/">Contact</a><br />
+    <%= link_to t('.home'), store_url %><br />
+    <a href="/"><%= t('.questions') %></a><br />
+    <a href="/"><%= t('.news') %></a><br />
+    <a href="/"><%= t('.contact') %></a><br />
     <% if session[:user_id] %>
       <ul>
         <li><%= link_to 'Orders', orders_path %></li>
