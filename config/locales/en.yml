@@ -29,3 +29,16 @@ en:
       title: "Your Cart"
       empty: "Empty cart"
       checkout: "Checkout"
+
+  orders:
+    new:
+      legend: "Please enter your details"
+    form:
+      name: "Name"
+      address: "Address"
+      email: "E-mail"
+      pay_type: "Pay with"
+      pay_prompt: "Select a payment method"
+      submit: "Place Order"
+
+  thanks: "Thank you for your order"
