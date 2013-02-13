@@ -31,9 +31,9 @@
 <% @order.line_items.each do |line| %>
   <tr>
     <td><%= line.product.title %></td>
-    <td><%= number_to_currency line.price %></td>
+    <td><%= number_to_currency_locale line.price %></td>
     <td><%= line.quantity %></td>
-    <td><%= number_to_currency line.total_price %></td>
+    <td><%= number_to_currency_locale line.total_price %></td>
   </tr>
 <% end %>
 </table>

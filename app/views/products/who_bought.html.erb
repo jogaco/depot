@@ -11,12 +11,12 @@
       <tr>
         <td><%= line.product.title %></td>
         <td><%= line.quantity %></td>
-        <td><%= number_to_currency line.total_price %></td>
+        <td><%= number_to_currency_locale line.total_price %></td>
       </tr>
     <% end %>
     <tr>
       <th colspan="2">total</th>
-      <th><%= number_to_currency order.line_items.map(&:total_price).sum %></th>
+      <th><%= number_to_currency_locale order.line_items.map(&:total_price).sum %></th>
     </tr>
   </table>
   <p>Paid by <%= order.pay_type %>
